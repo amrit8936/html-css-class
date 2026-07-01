@@ -3,30 +3,41 @@ const descriptionInput = document.querySelector("#description");
 const form = document.querySelector("#todo-form");
 const todoList = document.querySelector("#todo-list");
 
-form.addEventListener("select", (event) => {
-  event.preventDefault();
-  const title = titleInput.value.trim();
-  const description = descriptionInput.value.trim();
+if (form && todoList) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-  if(title === "" || description === "") {
-    alert("Please fill in both the title and description fields.");
-    return;
-  }
-  const li = document.createElement("li");
+    const title = titleInput.value.trim();
+    const description = descriptionInput.value.trim();
 
-  const newtitle = document.createElement("h3");
-  newtitle.textContent = title;
+    if (title === "" || description === "") {
+      alert("Please fill in both the title and description fields.");
+      return;
+    }
 
-  const newdescription = document.createElement("p");
-  newdescription.textContent = description;
-const deleteButton = document.createElement("button");
-  deleteButton.textContent = "Delete";
-  deleteButton.style.backgroundColor = "red";
+    const card = document.createElement("article");
+    card.className = "todo-card";
 
-  
+    const newTitle = document.createElement("h3");
+    newTitle.textContent = title;
 
-  li.appendChild(newtitle);
-  li.appendChild(newdescription);
-  li.appendChild(deleteButton);
+    const newDescription = document.createElement("p");
+    newDescription.textContent = description;
 
-    todoList.appendChild(li);
+    const deleteButton = document.createElement("button");
+    deleteButton.type = "button";
+    deleteButton.textContent = "Delete";
+    deleteButton.style.backgroundColor = "red";
+    deleteButton.style.marginTop = "12px";
+    deleteButton.addEventListener("click", () => {
+      card.remove();
+    });
+
+    card.appendChild(newTitle);
+    card.appendChild(newDescription);
+    card.appendChild(deleteButton);
+
+    todoList.appendChild(card);
+    form.reset();
+  });
+}
