@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.grandparent{
+    background:#ff7675;
+    padding:60px;
+    border:4px solid red;
+    text-align:center;
+    font-size:25px;
+    font-weight:bold;
+}
+
+.parent{
+    background:#55efc4;
+    padding:60px;
+    margin-top:30px;
+    border:4px solid green;
+    text-align:center;
+}
+
+.child{
+    margin-top:30px;
+    padding:15px 35px;
+    font-size:20px;
+    border:none;
+    background:#74b9ff;
+    cursor:pointer;
+    border-radius:8px;
+}
+
+.child:hover{
+    background:#0984e3;
+    color:white;
+}
