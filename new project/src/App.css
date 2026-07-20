@@ -1,0 +1,12 @@
+/* =========================================================
+   App.css — App-level styles
+   Minimal wrapper reset; all page styling lives in
+   FormComponent.css. This file is kept for extensibility.
+   ========================================================= */
+
+/* Ensure the #root container fills the full viewport */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

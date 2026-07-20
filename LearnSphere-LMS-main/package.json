@@ -1,0 +1,9 @@
+{
+  "name": "edunova-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev:frontend",
+    "dev:frontend": "npm --prefix LearnSphere-LMS-main/frontend run dev",
+    "dev:backend": "npm --prefix LearnSphere-LMS-main/backend run dev"
+  }
+}

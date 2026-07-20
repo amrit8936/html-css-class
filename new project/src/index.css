@@ -1,0 +1,52 @@
+/* =========================================================
+   index.css — Global Reset & Base Styles
+   Imported once in main.jsx; applies to the entire app.
+   ========================================================= */
+
+/* Load Inter from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ---------- Box-sizing reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Base document ---------- */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #1a1a2e;  /* fallback; FormComponent sets its own background */
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ---------- Remove default list styles ---------- */
+ul, ol {
+  list-style: none;
+}
+
+/* ---------- Remove default anchor styles ---------- */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- Remove number input spinners ---------- */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
